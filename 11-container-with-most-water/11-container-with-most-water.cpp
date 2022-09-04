@@ -7,7 +7,7 @@ public:
         while(left <= right)
         {
             int sum = (right-left) * min(height[left],height[right]);
-            water = (water>sum)?water:sum;
+            water = max(water,sum);
             if(height[left] < height[right])
                 left++;
             else
